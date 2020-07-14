@@ -9,19 +9,18 @@ import Homepage from './Home';
 import About from './About';
 
 function App(props) {
-  console.log(props);
+  // console.log(Object.values(props));
   return (
     <Router>
       <Header/>
         <Switch>
           <Route exact path='/'>
-            <Homepage/>
+            <Homepage array={Object.values(props)}/>
           </Route>
           <Route exact path='/about'>
             <About/>
           </Route>
         </Switch>
-      
     </Router>
   );
 }
