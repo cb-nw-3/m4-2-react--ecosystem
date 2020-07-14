@@ -1,16 +1,19 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 function ListingGrid({ items }) {
   return (
     <Grid>
       {items.map((item) => {
         return (
-          <ItemCard>
-            <ItemImage src={item.imageSrc}></ItemImage>
-            <ItemTitle>{item.name}</ItemTitle>
-            <ItemSubtitle>{item.latinName}</ItemSubtitle>
-          </ItemCard>
+          <StyledLink to={`/items/${item.id}`}>
+            <ItemCard>
+              <ItemImage src={item.imageSrc}></ItemImage>
+              <ItemTitle>{item.name}</ItemTitle>
+              <ItemSubtitle>{item.latinName}</ItemSubtitle>
+            </ItemCard>
+          </StyledLink>
         );
       })}
     </Grid>
@@ -54,6 +57,10 @@ const ItemSubtitle = styled.h2`
   font-size: 0.9em;
   color: grey;
   font-style: italic;
+`;
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: black;
 `;
 
 export default ListingGrid;

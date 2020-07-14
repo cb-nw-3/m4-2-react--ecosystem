@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./header";
 import About from "./About";
 import Homepage from "./Homepage";
+import ItemDetails from "./ItemDetails";
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
@@ -17,7 +18,9 @@ function App(props) {
       <GlobalStyle />
       <Header></Header>
       <Switch>
-        <Route path="/items/:itemId">Specific Item Page</Route>
+        <Route path="/items/:itemId">
+          <ItemDetails />
+        </Route>
         <Route path="/about">
           <About />
         </Route>
