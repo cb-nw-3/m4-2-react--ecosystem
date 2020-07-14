@@ -9,7 +9,7 @@ function App(props) {
     <Router>
       <Header></Header>
       <Switch>
-        <Route path="/">Homepage</Route>
+        <Route exact={true} path="/">Homepage</Route>
         <Route path="/about">About</Route>
       </Switch>
     </Router>
