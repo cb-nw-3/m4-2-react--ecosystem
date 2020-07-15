@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Wrapper = styled.div`
   display: grid;
@@ -14,11 +15,13 @@ const ListingGrid = ({ itemList }) => {
     <Wrapper>
       {items.map((item, index) => (
         <div key={item.name + index}>
-          <img
-            src={item.imageSrc}
-            alt={item.name}
-            style={{ width: "200px" }}
-          ></img>
+          <Link to={`/items/${item.id}`}>
+            <img
+              src={item.imageSrc}
+              alt={item.name}
+              style={{ width: "200px" }}
+            ></img>
+          </Link>
           <h3>{item.name}</h3>
           <p>{item.latinName}</p>
         </div>
