@@ -10,7 +10,7 @@ function Header() {
       <nav>
         <NavList>
           <li>
-            <NavLink exact={true} to="/">Home</NavLink>
+            <NavLink exact={"true"} to="/">Home</NavLink>
           </li>
           <li>
             <NavLink to="/about">About</NavLink>
