@@ -9,14 +9,21 @@ Modern JS apps use "client-side routing".
 All routes are defined in the React application.
 
 ```jsx
-import {Route} from 'react-router-dom';
+// dom : (document object modual)
+import { Route } from "react-router-dom";
 
-<Route path="/about">
-  <About />
-</Route>
-<Route path="/blog">
-  <Blog />
-</Route>
+const App = () => {
+  return (
+    <div>
+      <Route path="/about">
+        <About />
+      </Route>
+      <Route path="/blog">
+        <Blog />
+      </Route>
+    </div>
+  );
+};
 ```
 
 ---
@@ -63,11 +70,18 @@ Current URL: http://localhost:3000/about
 
 Current URL: http://localhost:3000/items/abc
 
+<div>
+  Item detail page
+  Item list page
+  404 not found
+</div>
+ALL 3 accepted without switch
 ---
 
 # `<Switch>`
 
 Renders the first match
+similar to switch statement
 
 ---
 
@@ -78,7 +92,7 @@ All routes must be nested under a router
 ---
 
 ```jsx
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App(props) {
   return (
@@ -110,7 +124,7 @@ export default App;
 Use the provided `<Link>` component to get from one route to another.
 
 ```jsx
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 <Link to="/shop/abc123">View item details</Link>;
 ```
@@ -126,6 +140,7 @@ Why use `<Link to="...">` instead of `<a href="...">`?
 # Question
 
 Is this "real" navigation?
+yes, back button still works. preserve the history.
 
 ---
 
@@ -154,7 +169,7 @@ We'll learn much more about them in the next few lectures.
 ---
 
 ```jsx
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 
 const ItemDetails = () => {
   // `useParams` is the hook.
