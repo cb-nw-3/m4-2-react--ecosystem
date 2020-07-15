@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { NavLink } from 'react-router-dom';
 
-function Header() {
+const Header = () => {
   return (
     <Wrapper>
       <Title>Fruit Emporium</Title>

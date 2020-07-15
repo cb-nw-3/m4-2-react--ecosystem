@@ -16,10 +16,10 @@ function App(props) {
       <Header />
       <Switch>
         <Route exact path="/">
-          Home
+          <Home />
         </Route>
         <Route path="/about">
-          About
+          <About />
         </Route>
       </Switch>
     </Router>
