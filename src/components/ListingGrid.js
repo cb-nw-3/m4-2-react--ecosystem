@@ -1,18 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
-  display: flex;
+import ListingItem from './ListingItem';
+
+const Grid = styled.div`
+  display: grid;
+  margin: auto;
+  grid-template-columns: repeat(3,auto);
+  grid-template-rows: repeat(3,auto);
+  row-gap: 30px;
+  column-gap: 30px;
 `;
 
 const ListingGrid = ({ itemList }) => {
-  console.log(itemList);
+  //console.log(itemList);
   return (
-    <Wrapper>
+    <Grid>
       {itemList.map(item => (
-        <h1>{item.name}</h1>
+        <ListingItem item={item} key={item.id} />
       ))}
-    </Wrapper>
+    </Grid>
 
   );
 }
