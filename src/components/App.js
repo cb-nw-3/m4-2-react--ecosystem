@@ -5,10 +5,10 @@ import Header from './Header';
 function App(props) {
   return (
     <Router>
-      {/* <Header></Header> */}
+      <Header></Header>
       <Switch>
-        <Route path='/'>Home</Route>
         <Route path='/about'>About</Route>
+        <Route path='/'>Home</Route>
       </Switch>
     </Router>
   );

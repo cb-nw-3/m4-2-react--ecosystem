@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 function Header() {
@@ -6,8 +7,8 @@ function Header() {
     <Wrapper>
       <Title>Fruit Emporium</Title>
       <Nav>
-        <div>Home</div>
-        <div>About</div>
+        <Link to='/'>Home</Link>
+        <Link to='/about'>About</Link>
       </Nav>
     </Wrapper>
   );
