@@ -8,7 +8,7 @@
 ---
 
 ```jsx
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Button = styled.button`
   background: blueviolet;
@@ -19,7 +19,7 @@ const Button = styled.button`
   border-radius: 2px;
 `;
 
-ReactDOM.render(<Button>Hello World</Button>, document.querySelector('#root'));
+ReactDOM.render(<Button>Hello World</Button>, document.querySelector("#root"));
 ```
 
 ---
@@ -165,6 +165,22 @@ function FantasticStory(props) {
     </div>
   );
 }
+```
+
+```jsx
+const Paragraph = styled.p`
+  font-size: 18px;
+  line-height: 1.4;
+  color: #333;
+
+  & strong {
+    color: red;
+  }
+
+  & em {
+    color: #666;
+  }
+`;
 ```
 
 ---
