@@ -33,6 +33,7 @@ function Homepage() {
 }
 
 const Wrapper = styled.header`
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -86,8 +87,9 @@ const TitleWrapper = styled.div`
 `;
 
 const H3 = styled.h3`
+  margin-top: 10px;
   font-size: 0.85rem;
-  color: silver;
+  color: gray;
   font-style: italic;
   font-weight: 200;
 `;
