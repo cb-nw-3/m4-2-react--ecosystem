@@ -4,12 +4,15 @@ import { items } from '../data';
 
 const ListingGrid = ({ itemList }) => {
   return (
-    <section>
+    <Section>
       {Object.keys(itemList).map((key) => {
-        return <img src={itemList[key].imageSrc}></img>;
+        return (
+          <WrapperImage>
+            <Img src={itemList[key].imageSrc}></Img>
+          </WrapperImage>
+        );
       })}
-      ;
-    </section>
+    </Section>
   );
 };
 
@@ -26,23 +29,40 @@ function Homepage() {
 }
 
 const Wrapper = styled.header`
-  @import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
-  font-family: 'Sora', sans-serif;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
   padding: 0 25px;
+  background-color: #f9f9f9;
 `;
 
 const Title = styled.h2`
   font-size: 1.2rem;
 `;
 
-const Nav = styled.nav`
+const Section = styled.section`
   display: flex;
   justify-content: space-between;
-  width: 130px;
+  width: 100%;
+`;
+
+const WrapperImage = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  height: 240px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #ececec;
+`;
+
+const Img = styled.img`
+  position: absolute;
+  top: -10px
+  width: 150px;
+  border-radius: 6px;
 `;
 
 export default Homepage;

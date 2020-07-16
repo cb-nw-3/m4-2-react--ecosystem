@@ -15,12 +15,11 @@ function Header() {
 }
 
 const Wrapper = styled.header`
-  @import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
-  font-family: 'Sora', sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 25px;
+  min-width: 100%;
 `;
 
 const Title = styled.h1`
