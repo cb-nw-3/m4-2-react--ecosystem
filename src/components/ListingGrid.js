@@ -1,16 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import FruitCard from "./FruitCard";
 
 function ListingGrid({ itemList }) {
 	return (
 		<div>
 			{itemList.map((item) => (
-				<Link to={`/items/${item.id}`}>
-					<div>{JSON.stringify(item)}</div>
-				</Link>
+				<FruitCard
+					name={item.name}
+					latinName={item.latinName}
+					imageSrc={item.imageSrc}
+					id={item.id}
+				/>
 			))}
-			{/* Component Fruitcard() */}
 		</div>
 	);
 }
