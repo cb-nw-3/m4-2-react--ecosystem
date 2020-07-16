@@ -25,6 +25,7 @@ const Wrapper = styled.header`
 
 const Title = styled.h1`
   font-size: 32px;
+  font-weight: 1000;
 `;
 
 const NavList = styled.ul`
@@ -34,6 +35,12 @@ const NavList = styled.ul`
 const NavItem = styled(Link)`
   text-decoration: none;
   padding: 0px 10px;
+  color: purple;
+  font-weight: 200;
+
+  &:visited {
+    color: hotpink;
+  }
 `;
 
 export default Header;

@@ -5,6 +5,7 @@ import GlobalStyles from "./GlobalStyles";
 import Header from "./Header";
 import Homepage from "./Homepage";
 import About from "./About";
+import ItemDetails from "./ItemDetails";
 
 function App(props) {
   return (
@@ -17,6 +18,9 @@ function App(props) {
         </Route>
         <Route path="/about">
           <About />
+        </Route>
+        <Route path="/items/:itemId">
+          <ItemDetails />
         </Route>
       </Switch>
     </BrowserRouter>

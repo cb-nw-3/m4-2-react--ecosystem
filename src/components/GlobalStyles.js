@@ -1,10 +1,9 @@
-import React from "react";
-
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
   * {
     font-family: 'Raleway';
+    background-color: whitesmoke;
   }
 
   p {
