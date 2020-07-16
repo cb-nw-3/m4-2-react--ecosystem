@@ -8,8 +8,8 @@ const ListingGrid = ({ itemList }) => {
     <Section>
       {Object.keys(itemList).map((key, index) => {
         return (
-          <Link to={'/items/' + key}>
-            <WrapperImage key={'Wrapper' + index}>
+          <Link key={'Wrapper' + index} to={'/items/' + key}>
+            <WrapperImage>
               <Img src={itemList[key].imageSrc}></Img>
               <TitleWrapper>
                 <H2>{itemList[key].name}</H2>

@@ -2,12 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { items } from '../data';
 import { sellers } from '../data';
-import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 
 const ItemDetails = () => {
   const { itemId } = useParams();
-  console.log(items[itemId]);
   return (
     <Section>
       <Image src={items[itemId].imageSrc}></Image>

@@ -19,6 +19,9 @@ h6 {
   text-decoration: none;
 }
 
+a {
+  outline: 0;
+}
 .wrapperAll {
   display: flex;
   width: 100vw;
