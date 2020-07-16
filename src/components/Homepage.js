@@ -35,6 +35,8 @@ const Wrapper = styled.header`
   align-items: flex-start;
   padding: 0 25px;
   background-color: #f9f9f9;
+  width: 100%;
+  justify-self: stretch;
 `;
 
 const Title = styled.h2`
@@ -43,24 +45,26 @@ const Title = styled.h2`
 
 const Section = styled.section`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100%;
+  flex-wrap: wrap;
 `;
 
 const WrapperImage = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
-  width: 200px;
+  min-width: 240px;
   height: 240px;
   background: white;
   border-radius: 8px;
   border: 1px solid #ececec;
+  margin: 20px 15px;
 `;
 
 const Img = styled.img`
   position: absolute;
-  top: -10px
+  top: -10px;
   width: 150px;
   border-radius: 6px;
 `;
