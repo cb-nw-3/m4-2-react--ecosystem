@@ -9,8 +9,8 @@ function Header(props) {
     <Wrapper>
       <Title>Fruit Emporium</Title>
       <Nav>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
+        <StyledLink to="/">Home</StyledLink>
+        <StyledLink to="/about">About</StyledLink>
       </Nav>
     </Wrapper>
   );
@@ -32,10 +32,14 @@ const Nav = styled.nav`
   width: 150px;
   display: flex;
   justify-content: space-between;
+`;
 
-  & a {
-    text-decoration: none;
-    color: purple;
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: purple;
+
+  &:hover {
+    color: blueviolet;
   }
 `;
 

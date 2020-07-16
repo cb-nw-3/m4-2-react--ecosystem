@@ -101,6 +101,13 @@ function App(props) {
 }
 ```
 
+```jsx
+const Wrapper = styled.div`
+  margin: 0 auto;
+  height: 300px;
+`;
+```
+
 ---
 
 ### Exercise #2
@@ -132,6 +139,24 @@ function IconButton(props) {
     </button>
   );
 }
+```
+
+```jsx
+const Button = styled.button`
+  color: tomato;
+  font-weight: bold;
+  padding: 20px;
+
+  &:hover,
+  &:focus {
+    transform: translateY(-3px);
+  }
+`;
+
+const Icon = styled.i`
+  width: 32px;
+  height: 32px;
+`;
 ```
 
 ---
@@ -188,7 +213,7 @@ const Paragraph = styled.p`
 ### Global styles
 
 ```jsx
-import {createGlobalStyles} from 'styled-components';
+import {createGlobalStyle} from 'styled-components';
 
 const GlobalStyles = createGlobalStyles`
   * {

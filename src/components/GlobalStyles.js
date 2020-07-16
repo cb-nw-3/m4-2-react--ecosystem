@@ -16,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
 
   *{
     font-family:'Raleway', sans-serif;
+    box-sizing:border-box;
   }
 `;
 
