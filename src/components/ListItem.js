@@ -5,7 +5,6 @@ const ListItem = ({ fruit }) => {
   return (
     <Wrapper>
       <FruitImage src={fruit.imageSrc} />
-
       <FruitName>{fruit.name}</FruitName>
       <LatinName>{fruit.latinName}</LatinName>
     </Wrapper>
