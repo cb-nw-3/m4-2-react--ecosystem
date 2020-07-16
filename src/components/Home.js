@@ -2,6 +2,12 @@ import React from "react";
 
 import styled from "styled-components";
 
+import { items } from "../data";
+
+import ListingGrid from "./ListingGrid";
+
+let itemsArray = Object.values(items);
+
 const Home = () => {
   return (
     <div>
@@ -11,6 +17,7 @@ const Home = () => {
       <Paragraph>
         <strong>Browse items:</strong>
       </Paragraph>
+      <ListingGrid itemList={itemsArray} />
     </div>
   );
 };
