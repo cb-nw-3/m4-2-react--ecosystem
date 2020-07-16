@@ -45,6 +45,7 @@ What gets rendered in the following snippets?
   <Route exact={true} path="/">
     Home
   </Route>
+  // only this route would render because the url is not exactly "/"
   <Route path="/about">About</Route>
 </div>
 ```
