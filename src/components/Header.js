@@ -7,24 +7,33 @@ function Header(props) {
 		<Nav>
 			<h1>Fruit Emporium</h1>
 			<Navdiv>
-				<Link style={{ textDecoration: "none" }} to="/">
+				<LinkTest to="/">
 					Home
-				</Link>
+				</LinkTest>
 
-				<Link style={{ textDecoration: "none", marginLeft: '30px' }} to="/about">
+				<LinkTest to="/about">
 					About
-				</Link>
+				</LinkTest>
 			</Navdiv>
 		</Nav>
 	);
 }
 
+const LinkTest = styled(Link)`
+	text-decoration: none;
+	margin-right: 30px;
+	color: lightcoral;
+	font-size: 40px;
+`;
+
+
 const Nav = styled.header`
 	font-family: Arial, Helvetica, sans-serif;
 	display: flex;
 	align-items: center;
+	font-size: 30px;
 	justify-content: space-between;
-	text-decoration: none;
+	margin-left: 15px;	
 `;
 
 const Navdiv = styled.span`
