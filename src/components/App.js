@@ -8,6 +8,8 @@ import About from "./About";
 
 import Home from "./Home";
 
+import ItemDetails from "./ItemsDetails";
+
 import GlobalStyle from "./GlobalStyles";
 
 function App(props) {
@@ -21,6 +23,9 @@ function App(props) {
         </Route>
         <Route exact path="/about">
           <About />
+        </Route>
+        <Route exact path="/items/:itemId">
+          <ItemDetails />
         </Route>
       </Switch>
     </Router>
