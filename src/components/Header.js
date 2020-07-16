@@ -16,6 +16,7 @@ const Header = () => {
 };
 
 const Wrapper = styled.header`
+  margin: 0 75px;
   display: flex;
   flex-direction: row;
   align-items: center;

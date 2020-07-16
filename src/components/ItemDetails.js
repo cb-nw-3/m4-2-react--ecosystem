@@ -24,7 +24,7 @@ const ItemDetails = () => {
         <BuyButton>${currentItem.price} - Buy now</BuyButton>
         <SellerInfo>
           <Avatar src={sellers[currentItem.sellerId].avatarSrc} />
-          Sold by: <strong>Fruit Bazaar, by {sellerName}</strong>{" "}
+          Sold by: <strong> Fruit Bazaar, by {sellerName}</strong>{" "}
         </SellerInfo>
       </ItemInfo>
     </Wrapper>
@@ -33,36 +33,41 @@ const ItemDetails = () => {
 
 const Wrapper = styled.div`
   display: flex;
+  margin: 0 75px;
 `;
 
 const FruitImage = styled.img`
-  width: 500px;
+  width: 350px;
   border-radius: 20px;
   margin-top: 20px;
+`;
+
+const ItemInfo = styled.div`
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
 `;
 
 const FruitName = styled.h2`
   font-size: 24px;
   font-weight: 1000;
-  text-align: center;
+  margin-bottom: 5px;
 `;
 
 const LatinName = styled.p`
   font-size: 16px;
   font-style: italic;
-  text-align: center;
+  margin-top: 0px;
   margin-bottom: 20px;
 `;
 
-const ItemInfo = styled.div`
-  display: flex;
-  flex-direction: column;
+const Description = styled.p`
+  margin-bottom: 15px;
 `;
-
-const Description = styled.p``;
 
 const Origin = styled.p`
   font-style: italic;
+  margin-top: 0px;
   & strong {
     font-weight: 800;
   }
@@ -70,13 +75,27 @@ const Origin = styled.p`
 
 const BuyButton = styled.button`
   border-radius: 10px;
+  padding: 15px 50px;
+  margin: 20px 0px;
+  background-color: hsl(256deg, 100%, 44%);
+  color: white;
+  border: 0px;
 `;
 
-const SellerInfo = styled.div``;
+const SellerInfo = styled.div`
+  display: flex;
+  align-items: center;
+
+  & strong {
+    margin-left: 10px;
+    font-weight: bold;
+  }
+`;
 
 const Avatar = styled.img`
   border-radius: 50%;
   height: 35px;
+  margin-right: 10px;
 `;
 
 export default ItemDetails;
