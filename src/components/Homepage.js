@@ -9,7 +9,9 @@ const ListingGrid = ({ itemList }) => {
         return (
           <WrapperImage key={'Wrapper' + index}>
             <Img src={itemList[key].imageSrc}></Img>
-            <H2>{itemList[key].name}</H2>
+            <TitleWrapper>
+              <H2>{itemList[key].name}</H2>
+            </TitleWrapper>
             <H3>{itemList[key].latinName}</H3>
           </WrapperImage>
         );
@@ -46,6 +48,7 @@ const Title = styled.h2`
 `;
 
 const Section = styled.section`
+  margin-top: 20px;
   display: flex;
   justify-content: flex-start;
   width: 100%;
@@ -75,7 +78,13 @@ const Img = styled.img`
 const H2 = styled.h2`
   margin: 0;
   padding: 0;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+`;
+
+const TitleWrapper = styled.div`
+  margin: 0;
+  padding: 9px;
+  box-shadow: 0 20px 8px -18px #111;
 `;
 
 const H3 = styled.h3`
