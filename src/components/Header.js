@@ -1,18 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 function Header() {
   return (
     <Wrapper>
       <Title>Fruit Emporium</Title>
         <Navigation>
-          <StyledLink to='/'>
+          <NavigationLink exact activeClassName='active' to='/'>
             Home
-          </StyledLink>
-          <StyledLink to='/about'>
+          </NavigationLink>
+          <NavigationLink exact activeClassName='active' to='/about'>
             About
-          </StyledLink>
+          </NavigationLink>
         </Navigation>
           
     </Wrapper>
@@ -36,11 +36,16 @@ const Navigation = styled.nav`
   padding: 0 15px;
 `;
 
-const StyledLink = styled(Link)`
+const NavigationLink = styled(NavLink)`
   display: inline-block;
   text-decoration: none;
   margin: 20px 40px;
   color: blue;
-`
+
+  &.active {
+    color: fuchsia;
+    text-decoration: underline;
+  }
+`;
       
 export default Header;
