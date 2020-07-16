@@ -18,6 +18,8 @@ const Homepage = () => {
   );
 };
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  margin: 0 75px;
+`;
 
 export default Homepage;

@@ -6,12 +6,12 @@ import { Link } from "react-router-dom";
 const ListItem = ({ fruit }) => {
   return (
     <Wrapper>
-      <Link to={`./items/${fruit.id}`}>
+      <CardLink to={`./items/${fruit.id}`}>
         <FruitImage src={fruit.imageSrc} />
-        <FruitName>{fruit.name}</FruitName>
-        <Separator />
-        <LatinName>{fruit.latinName}</LatinName>
-      </Link>
+      </CardLink>
+      <FruitName>{fruit.name}</FruitName>
+      <Separator />
+      <LatinName>{fruit.latinName}</LatinName>
     </Wrapper>
   );
 };
@@ -51,6 +51,10 @@ const LatinName = styled.p`
   text-align: center;
   margin-bottom: 20px;
   background-color: white;
+`;
+
+const CardLink = styled(Link)`
+  text-decoration: none;
 `;
 
 export default ListItem;
