@@ -84,7 +84,7 @@ const H2 = styled.h2`
 const TitleWrapper = styled.div`
   margin: 0;
   padding: 9px;
-  box-shadow: 0 20px 8px -18px #111;
+  box-shadow: 0 18px 8px -16px gray;
 `;
 
 const H3 = styled.h3`
