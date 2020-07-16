@@ -5,10 +5,12 @@ import { items } from '../data';
 const ListingGrid = ({ itemList }) => {
   return (
     <Section>
-      {Object.keys(itemList).map((key) => {
+      {Object.keys(itemList).map((key, index) => {
         return (
-          <WrapperImage>
+          <WrapperImage key={'Wrapper' + index}>
             <Img src={itemList[key].imageSrc}></Img>
+            <H2>{itemList[key].name}</H2>
+            <H3>{itemList[key].latinName}</H3>
           </WrapperImage>
         );
       })}
@@ -53,7 +55,8 @@ const Section = styled.section`
 const WrapperImage = styled.div`
   position: relative;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   min-width: 240px;
   height: 240px;
   background: white;
@@ -63,10 +66,22 @@ const WrapperImage = styled.div`
 `;
 
 const Img = styled.img`
-  position: absolute;
-  top: -10px;
+  position: relative;
+  top: -25px;
   width: 150px;
   border-radius: 6px;
 `;
 
+const H2 = styled.h2`
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+`;
+
+const H3 = styled.h3`
+  font-size: 0.85rem;
+  color: silver;
+  font-style: italic;
+  font-weight: 200;
+`;
 export default Homepage;
