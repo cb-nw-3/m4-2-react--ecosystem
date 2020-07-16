@@ -7,12 +7,12 @@ function Header() {
     <Wrapper>
       <Title>Fruit Emporium</Title>
         <Navigation>
-          <Link to='/'>
+          <StyledLink to='/'>
             Home
-          </Link>
-          <Link to='/about'>
+          </StyledLink>
+          <StyledLink to='/about'>
             About
-          </Link>
+          </StyledLink>
         </Navigation>
           
     </Wrapper>
@@ -34,12 +34,13 @@ const Title = styled.h1`
 const Navigation = styled.nav`
   justify-content: space-between;
   padding: 0 15px;
+`;
 
-  & a{
-      display: inline-block;
-      text-decoration: none;
-      margin: 20px 40px;
-      color: blue;
-    }
+const StyledLink = styled(Link)`
+  display: inline-block;
+  text-decoration: none;
+  margin: 20px 40px;
+  color: blue;
 `
+      
 export default Header;

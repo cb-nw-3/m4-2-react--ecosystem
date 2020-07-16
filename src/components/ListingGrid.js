@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import ItemDetails from './ItemDetails';
+import { Link } from 'react-router-dom';
 
 const ListingGrid = ({ itemList}) => {
     let itemValues = Object.values(itemList);
@@ -10,7 +11,9 @@ const ListingGrid = ({ itemList}) => {
             {itemValues.map( (item) => {
               return (
               <FruitItem>
+                <Link to={`/items/${item.id}`}>
                 <FruitImage src={item.imageSrc}/>
+                </Link>
                 <FruitName>{item.name}</FruitName>
                 <FruitLatinName>{item.latinName}</FruitLatinName>
               </FruitItem>
