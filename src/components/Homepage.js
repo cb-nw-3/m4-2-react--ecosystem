@@ -1,19 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
 import { items } from '../data';
+import { Link } from 'react-router-dom';
 
 const ListingGrid = ({ itemList }) => {
   return (
     <Section>
       {Object.keys(itemList).map((key, index) => {
         return (
-          <WrapperImage key={'Wrapper' + index}>
-            <Img src={itemList[key].imageSrc}></Img>
-            <TitleWrapper>
-              <H2>{itemList[key].name}</H2>
-            </TitleWrapper>
-            <H3>{itemList[key].latinName}</H3>
-          </WrapperImage>
+          <Link to={'/items/' + key}>
+            <WrapperImage key={'Wrapper' + index}>
+              <Img src={itemList[key].imageSrc}></Img>
+              <TitleWrapper>
+                <H2>{itemList[key].name}</H2>
+              </TitleWrapper>
+              <H3>{itemList[key].latinName}</H3>
+            </WrapperImage>
+          </Link>
         );
       })}
     </Section>
