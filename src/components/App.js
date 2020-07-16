@@ -4,6 +4,7 @@ import React from 'react';
 import Header from './Header';
 import Homepage from './Homepage';
 import About from './About';
+import ItemDetails from './ItemDetails';
 
 function App(props) {
   return (
@@ -13,6 +14,9 @@ function App(props) {
         <Switch>
           <Route path='/about'>
             <About></About>
+          </Route>
+          <Route path='/items/:itemId'>
+            <ItemDetails></ItemDetails>
           </Route>
           <Route path='/'>
             <Homepage></Homepage>
