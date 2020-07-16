@@ -1,9 +1,10 @@
 import React from 'react';
-import {createGlobalStyles} from 'styled-components';
+import {createGlobalStyle} from 'styled-components';
 
-const GlobalStyles = createGlobalStyles`
-  *{
-     font-family: 'Raleway', sans-serif; 
+const GlobalStyles = createGlobalStyle`
+  *, *:before, *:after {
+     font-family: 'Lato', sans-serif;
+     box-sizing: border-box; 
   }
 `
 export default GlobalStyles;

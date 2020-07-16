@@ -7,6 +7,7 @@ import {
 import Header from './Header';
 import Homepage from './Home';
 import About from './About';
+import GlobalStyles from './GlobalStyles';
 
 function App(props) {
   // console.log(Object.values(props));
@@ -21,7 +22,9 @@ function App(props) {
             <About/>
           </Route>
         </Switch>
+        <GlobalStyles/>
     </Router>
+    
   );
 }
 

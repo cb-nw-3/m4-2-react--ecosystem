@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import ItemDetails from './ItemDetails';
 
 const ListingGrid = ({ itemList}) => {
     let itemValues = Object.values(itemList);
