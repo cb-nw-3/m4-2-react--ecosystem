@@ -28,8 +28,6 @@ function App(props) {
 }
 
 const Wrapper = styled.div`
-  @import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
-  font-family: 'Sora', sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

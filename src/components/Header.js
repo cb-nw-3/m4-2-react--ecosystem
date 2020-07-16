@@ -1,14 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import './header.css';
 
 function Header() {
   return (
     <Wrapper>
       <Title>Fruit Emporium</Title>
       <Nav>
-        <Link to='/'>Home</Link>
-        <Link to='/about'>About</Link>
+        <NavLink to='/' activeClassName='selected'>
+          Home
+        </NavLink>
+        <NavLink to='/about' activeClassName='selected'>
+          About
+        </NavLink>
       </Nav>
     </Wrapper>
   );
