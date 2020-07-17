@@ -6,7 +6,6 @@ import Paragraph from './Paragraph';
 const About = () => {
     return (
         <>
-            <h3>About</h3>
             <Paragraph>
                 Fruit emporium is founded on a very simple principle: Fruit is good.
             </Paragraph>

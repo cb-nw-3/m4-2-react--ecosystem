@@ -25,6 +25,10 @@ const Wrapper = styled.header`
     display: flex;
     justify-content: space-between;
     height: 100px;
+    background: white;
+    padding: 0 20px;
+    box-shadow: 0px 0px 10px;
+    margin-bottom: 40px;
   `;
 
 const Title = styled.h1`
@@ -35,7 +39,7 @@ const Title = styled.h1`
 const Navigation = styled.ul`
     display: flex;
     flex-direction: row;
-    font-size: 24px;
+    font-size: 22px;
     list-style-type:none;
   `
 
