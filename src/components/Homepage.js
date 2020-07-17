@@ -6,11 +6,16 @@ import ListingGrid from './ListingGrid';
 import {items} from '../data'
 
 function About() {
-  return <div>
+  return <StyledContainer>
     <p>Fruit emporium sells the finest fruits from this world and beyond.</p>
     <p>Browse items:</p>
     <ListingGrid items={Object.values(items)}></ListingGrid>
-  </div>
+  </StyledContainer>
 }
-console.log(items)
+
+const StyledContainer = styled.div`
+  width: 800px;
+  margin: 0 auto;
+`
+
 export default About;
