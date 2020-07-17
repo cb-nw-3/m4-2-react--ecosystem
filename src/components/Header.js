@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navigation = styled.nav`
   display: flex;
@@ -16,9 +16,10 @@ const StyledUl = styled.ul`
   line-height: 50px;
 `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(NavLink)`
   text-decoration: none;
   color: #6b45e7;
+  padding: 10px;
 `;
 
 const Header = (props) => {
@@ -26,10 +27,26 @@ const Header = (props) => {
     <Navigation>
       <StyledH1>Fruit Emporium</StyledH1>
       <StyledUl>
-        <StyledLink to="/" style={{ padding: "10px" }}>
+        <StyledLink
+          exact
+          to="/"
+          activeStyle={{
+            fontWeight: "bold",
+            color: "#FF448B",
+            textDecoration: "underline",
+          }}
+        >
           Home
         </StyledLink>
-        <StyledLink to="/about" style={{ padding: "10px" }}>
+        <StyledLink
+          exact
+          to="/about"
+          activeStyle={{
+            fontWeight: "bold",
+            color: "#FF448B",
+            textDecoration: "underline",
+          }}
+        >
           About
         </StyledLink>
       </StyledUl>
