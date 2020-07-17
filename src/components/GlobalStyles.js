@@ -11,6 +11,8 @@ const GlobalStyles = createGlobalStyle`
 
   p, h1, h3, a, h2 {
     font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
   }
 
 `;
