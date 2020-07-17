@@ -1,15 +1,19 @@
 import React from "react";
 
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
     <Wrapper>
       <Title>Fruit Emporium</Title>
       <NavList>
-        <NavItem to="/">Home</NavItem>
-        <NavItem to="/about">About</NavItem>
+        <NavItem to="/" exact={true} activeClassName="selected">
+          Home
+        </NavItem>
+        <NavItem to="/about" activeClassName="selected">
+          About
+        </NavItem>
       </NavList>
     </Wrapper>
   );
@@ -33,14 +37,26 @@ const NavList = styled.ul`
   display: flex;
 `;
 
-const NavItem = styled(Link)`
+const NavItem = styled(NavLink)`
   text-decoration: none;
   padding: 0px 10px;
   color: purple;
-  font-weight: 200;
+  font-weight: 1000;
+  position: relative;
 
-  &:visited {
+  &.selected {
     color: hotpink;
+  }
+  &.selected:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -5px;
+    width: 60%;
+    height: 2px;
+    background-color: currentColor;
   }
 `;
 
