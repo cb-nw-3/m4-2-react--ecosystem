@@ -2,7 +2,9 @@ import React from 'react';
 // https://gist.github.com/siakaramalegos/df4620c52e829f6107c75d5c3f0ad7f5
 import { BrowserRouter as Router, Switch, Route, BrowserRouter } from 'react-router-dom';
 
-import Header from './Header'
+import Header from './Header';
+import About from './About';
+import Homepage from './Homepage'
 
 function App(props) {
   return (
@@ -10,8 +12,12 @@ function App(props) {
         <Router>
           <Header />
           <Switch>
-            <Route exact path="/">home</Route>
-            <Route path="/about">about</Route>
+            <Route exact path="/">
+              <Homepage />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
             <Route path="/items">item</Route>
           </Switch>
         </Router>

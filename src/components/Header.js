@@ -1,7 +1,7 @@
 import React from "react";
 
 import styled from 'styled-components';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 function Header() {
   return <StyledWrapper>
@@ -17,7 +17,7 @@ const StyledWrapper = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 10px;
 `;
 
 const StyledTitle = styled.h1`
