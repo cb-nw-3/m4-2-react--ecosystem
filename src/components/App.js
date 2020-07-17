@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './Header';
 import Homepage from './Homepage';
 import About from './About';
+import GlobalStyles from './GlobalStyles';
 
 function App(props) {
   return (
@@ -17,6 +18,7 @@ function App(props) {
           <About/>
         </Route>
       </Switch>
+      <GlobalStyles/>
     </Router>
   );
 }

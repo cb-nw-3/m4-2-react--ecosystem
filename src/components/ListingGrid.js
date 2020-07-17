@@ -5,11 +5,12 @@ import ListingItem from './ListingItem';
 
 const Grid = styled.div`
   display: grid;
-  margin: auto;
+  /* margin: auto; */
   grid-template-columns: repeat(3,auto);
   grid-template-rows: repeat(3,auto);
   row-gap: 30px;
   column-gap: 30px;
+  /* padding: 5%; */
 `;
 
 const ListingGrid = ({ itemList }) => {
