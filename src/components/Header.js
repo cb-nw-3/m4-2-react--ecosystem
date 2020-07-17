@@ -8,11 +8,11 @@ function Header() {
     <Wrapper>
       <Title>Fruit Emporium</Title>
       <Nav>
-        <NavLink to='/' activeClassName='selected'>
-          Home
-        </NavLink>
         <NavLink to='/about' activeClassName='selected'>
           About
+        </NavLink>
+        <NavLink to='/' activeClassName='selected' exact>
+          Home
         </NavLink>
       </Nav>
     </Wrapper>
