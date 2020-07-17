@@ -30,12 +30,14 @@ const Wrapper = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  /* padding-top: 30px;
+  padding-bottom: 30px; */
+  padding: 5%;
 `;
 
-const Title = styled.h1`
-  font-size: 32px;
+const Title = styled.h5`
+  font-size: 100px !important;
+  color: salmon;
   font-weight: 800;
 `;
 
