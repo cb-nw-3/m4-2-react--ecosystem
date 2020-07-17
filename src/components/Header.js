@@ -8,11 +8,14 @@ function Header() {
     <Wrapper>
       <Title>Fruit Emporium</Title>
       <Nav>
-        <NavLink to='/about' activeClassName='selected'>
-          About
-        </NavLink>
         <NavLink to='/' activeClassName='selected' exact>
           Home
+        </NavLink>
+        <NavLink to='/sellers' activeClassName='selected'>
+          Sellers
+        </NavLink>
+        <NavLink to='/about' activeClassName='selected'>
+          About
         </NavLink>
       </Nav>
     </Wrapper>
@@ -34,7 +37,7 @@ const Title = styled.h1`
 const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
-  width: 130px;
+  width: 210px;
 `;
 
 export default Header;

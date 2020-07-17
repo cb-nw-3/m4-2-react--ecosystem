@@ -5,6 +5,7 @@ import Header from './Header';
 import Homepage from './Homepage';
 import About from './About';
 import ItemDetails from './ItemDetails';
+import Sellers from './Sellers';
 
 function App(props) {
   return (
@@ -17,6 +18,9 @@ function App(props) {
           </Route>
           <Route path='/items/:itemId'>
             <ItemDetails></ItemDetails>
+          </Route>
+          <Route path='/sellers'>
+            <Sellers></Sellers>
           </Route>
           <Route path='/'>
             <Homepage></Homepage>
