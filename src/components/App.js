@@ -9,6 +9,8 @@ import Homepage from './Home';
 import About from './About';
 import GlobalStyles from './GlobalStyles';
 import ItemDetails from './ItemDetails';
+import Sellers from './Sellers';
+import SellerDetails from './SellerDetails';
 
 function App(props) {
   // console.log(Object.values(props));
@@ -24,6 +26,12 @@ function App(props) {
           </Route>
           <Route exact path='/items/:itemId'>
             <ItemDetails array={Object.values(props)}/>
+          </Route>
+          <Route exact path='/sellers'>
+            <Sellers array={Object.values(props)}/>
+          </Route>
+          <Route exact path='/sellers/:sellerId'>
+            <SellerDetails array={Object.values(props)}/>
           </Route>
         </Switch>
         <GlobalStyles/>

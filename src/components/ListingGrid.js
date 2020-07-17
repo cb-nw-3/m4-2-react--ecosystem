@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import ItemDetails from './ItemDetails';
 import { Link } from 'react-router-dom';
 
 const ListingGrid = ({ itemList}) => {

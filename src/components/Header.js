@@ -13,6 +13,9 @@ function Header() {
           <NavigationLink exact activeClassName='active' to='/about'>
             About
           </NavigationLink>
+          <NavigationLink exact activeClassName='active' to='/sellers'>
+            Sellers
+          </NavigationLink>
         </Navigation>
           
     </Wrapper>
