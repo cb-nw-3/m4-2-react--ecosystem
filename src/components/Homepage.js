@@ -9,10 +9,8 @@ const fruitObjects = Object.values(items);
 const Homepage = () => {
   return (
     <Wrapper>
-      <p>
-        Fruit emporium sells the finest fruits from this world and beyond.
-        Browse items:
-      </p>
+      <p>Fruit emporium sells the finest fruits from this world and beyond.</p>
+      <p>Browse items:</p>
       <ListingGrid itemList={fruitObjects} />
     </Wrapper>
   );
