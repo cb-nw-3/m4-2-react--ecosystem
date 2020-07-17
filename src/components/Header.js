@@ -24,16 +24,21 @@ const Header = () => {
 const Wrapper = styled.header`
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 100px;
     background: white;
-    padding: 0 20px;
+    padding: 0 10px;
     box-shadow: 0px 0px 10px;
     margin-bottom: 40px;
+
+    @media (min-width: 680px){
+      padding: 0 30px;
+    }
   `;
 
 const Title = styled.h1`
     font-size: 32px;
-
+    font-weight: 600;
   `;
 
 const Navigation = styled.ul`

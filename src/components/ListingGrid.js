@@ -15,8 +15,9 @@ const ListingGrid = ({ itemList }) => {
                                 src={item.imageSrc}
                                 alt={item.name}
                             />
-                            <h3> {item.name}</h3>
-                            <Paragraph> {item.latinName}</Paragraph>
+                            <ItemName> {item.name}</ItemName>
+                            <hr />
+                            <p> {item.latinName}</p>
                         </Link>
                     </div>
                 ))}
@@ -41,15 +42,32 @@ const Container = styled.div`
         box-shadow: 3px 5px 15px #888888;
     }
 
-    Link{
-        text-decoration: none;
-    }
-
     img{
         position: relative;
         top: -5px;
         width: 120px;
         border-radius: 20px
     }
+
+    a{
+        text-decoration: none;
+    }
+
+    p{
+        color: gray;
+        font-style: italic;
+    }
+
+    hr{
+        width: 30%;
+        min-width: 20px;
+    }
 `
+
+export const ItemName = styled.h3`
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+`
+
 export default ListingGrid;

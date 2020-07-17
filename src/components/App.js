@@ -39,7 +39,7 @@ const GlobalStyles = createGlobalStyle`
   /* reset css
   */
   
-  body {
+  body, h1, h3 {
   	margin: 0;
   	padding: 0;
   	border: 0;
@@ -71,7 +71,7 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 const Wrapper = styled.div`
-  margin: 0 20px;
+  margin: 0 30px;
 `
 
 export default App;
