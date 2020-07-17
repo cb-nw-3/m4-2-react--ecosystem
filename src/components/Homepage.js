@@ -20,6 +20,7 @@ const Homepage = () => {
   return (
     <Wrapper>
     <Text>Fruit emporium sells the finest fruits from this world and beyond.</Text>
+    <Text><strong>Browse Items:</strong></Text>
     <ListingGrid itemList={Object.values(items)} />
     </Wrapper>
     );
