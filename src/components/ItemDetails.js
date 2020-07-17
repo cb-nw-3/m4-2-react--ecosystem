@@ -84,6 +84,11 @@ const SellerImg = styled.img`
   margin-right: 10px;
 `;
 
+const TextQuantity = styled.p`
+  font-style: italic;
+  margin: 10px 0;
+`;
+
 
 
 const ItemDetails = () => {
@@ -108,6 +113,7 @@ const ItemDetails = () => {
           Product of <strong>{item.countryOfOrigin}</strong>
         </TextOrigin>
         <Button>{`$${item.price} - Buy now`}</Button>
+        <TextQuantity>{`quantity left: ${item.quantity}`}</TextQuantity>
         <SellerWrapper>
           <SellerImg src={seller.avatarSrc} />
           <p>Sold by: <strong>{seller.storeName}</strong> </p>
