@@ -14,8 +14,8 @@ function About() {
 }
 
 const StyledContainer = styled.div`
-  width: 800px;
-  margin: 0 auto;
+  min-width: 500px;
+  margin: 0 30px;
 `
 
 export default About;

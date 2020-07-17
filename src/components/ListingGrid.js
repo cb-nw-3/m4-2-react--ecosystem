@@ -15,9 +15,9 @@ function ListingGrid(props) {
 const StyledGrid = styled.div`
   display: grid;
   grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
   justify-items: center;
-  grid-row-gap: 50px;
+  grid-gap: 50px;
   margin: 30px;
 `
 
