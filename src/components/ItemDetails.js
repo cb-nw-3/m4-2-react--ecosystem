@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { items } from '../data';
+import { sellers } from '../data';
 
 const CardWrapper = styled.div`
   display: flex;
@@ -71,6 +72,18 @@ const Button = styled.button`
   }
 `;
 
+const SellerWrapper = styled.div`
+  display: flex;
+  padding: 30px 0;
+  align-items: center;
+`;
+
+const SellerImg = styled.img`
+  width: 50px;
+  border-radius: 100%;
+  margin-right: 10px;
+`;
+
 
 
 const ItemDetails = () => {
@@ -80,6 +93,7 @@ const ItemDetails = () => {
 
   //from the { items } data, access the item's object via it's ID
   const item = items[itemId];
+  const seller = sellers[item.sellerId];
   
   //console.log(item);
 
@@ -94,6 +108,10 @@ const ItemDetails = () => {
           Product of <strong>{item.countryOfOrigin}</strong>
         </TextOrigin>
         <Button>{`$${item.price} - Buy now`}</Button>
+        <SellerWrapper>
+          <SellerImg src={seller.avatarSrc} />
+          <p>Sold by: <strong>{seller.storeName}</strong> </p>
+        </SellerWrapper>
       </CardContent>
     </CardWrapper>
   );
