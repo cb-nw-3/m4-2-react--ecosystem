@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Switch, Route, BrowserRouter } from 'react-rou
 
 import Header from './Header';
 import About from './About';
-import Homepage from './Homepage'
+import Homepage from './Homepage';
+import ItemDetails from './ItemDetails';
 
 function App(props) {
   return (
@@ -18,7 +19,9 @@ function App(props) {
             <Route path="/about">
               <About />
             </Route>
-            <Route path="/items">item</Route>
+            <Route path="/items/:itemId">
+              <ItemDetails />
+            </Route>
           </Switch>
         </Router>
     </BrowserRouter>
