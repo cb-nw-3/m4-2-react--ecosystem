@@ -14,7 +14,6 @@ function App(props) {
     <Router>
       <div>
         <GlobalStyles></GlobalStyles>
-
         <Header></Header>
         <Switch>
           <Route exact path="/about">
@@ -36,6 +35,32 @@ function App(props) {
 const GlobalStyles = createGlobalStyle`
   * {
     font-family: 'Lato', sans-serif;
+
+  }
+
+.nav-items
+{
+  padding-right: 5px;
+}
+nav
+{
+  display: flex;
+
+}
+
+Link{
+  padding-right: 200px;
+
+}
+
+button
+  {
+  background: blueviolet;
+  border: none;
+  padding: 16px 32px;
+  color: white;
+  font-size: 21px;
+  border-radius: 2px;
   }
 
   p {

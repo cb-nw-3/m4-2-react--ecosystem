@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 function Header() {
   console.log("Header");
@@ -7,20 +8,17 @@ function Header() {
   return (
     <Wrapper>
       <Title>Fruit Emporium</Title>
-      <nav>Navigation Here</nav>
-      <Button>Hello</Button>
+      <nav>
+        <div className="nav-items">
+          <Link to="/">Home</Link>
+        </div>
+        <div className="nav-items">
+          <Link to="/about">About</Link>
+        </div>
+      </nav>
     </Wrapper>
   );
 }
-
-const Button = styled.button`
-  background: blueviolet;
-  border: none;
-  padding: 16px 32px;
-  color: white;
-  font-size: 21px;
-  border-radius: 2px;
-`;
 
 const Wrapper = styled.header`
   display: flex;
