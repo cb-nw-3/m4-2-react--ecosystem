@@ -21,7 +21,12 @@ const ItemDetails = () => {
         <Origin>
           Product of <strong>{currentItem.countryOfOrigin}</strong>
         </Origin>
-        <BuyButton>${currentItem.price} - Buy now</BuyButton>
+        {currentItem.quantity >= 1 && (
+          <BuyButton>${currentItem.price} - Buy now</BuyButton>
+        )}
+        {currentItem.quantity === 0 && (
+          <BuyButton>Sorry - Out of Stock!</BuyButton>
+        )}
         <SellerInfo>
           <Avatar src={sellers[currentItem.sellerId].avatarSrc} />
           Sold by: <strong> Fruit Bazaar, by {sellerName}</strong>{" "}
