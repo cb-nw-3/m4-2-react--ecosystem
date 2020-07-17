@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { items } from '../data';
 import { sellers } from '../data';
 import { useParams } from 'react-router-dom';
+import ListingGrid from './ListingGrid';
 
 const SellerDetails = () => {
   const { sellerId } = useParams();
@@ -15,23 +16,25 @@ const SellerDetails = () => {
       obj[key] = items[key];
       return obj;
     }, {});
-  console.log(filtered);
   return (
     <Section>
-      <Image src={sellers[sellerId].avatarSrc}></Image>
-      <TextWrapper>
-        <div>
-          <H2>{sellers[sellerId].storeName}</H2>
-          <Description>{sellers[sellerId].description}</Description>
-        </div>
-      </TextWrapper>
+      <div>
+        <Image src={sellers[sellerId].avatarSrc}></Image>
+        <TextWrapper>
+          <div>
+            <H2>{sellers[sellerId].storeName}</H2>
+            <Description>{sellers[sellerId].description}</Description>
+          </div>
+        </TextWrapper>
+      </div>
+      <ListingGrid itemList={filtered}></ListingGrid>
     </Section>
   );
 };
 
 const Section = styled.section`
   display: flex;
-  justify-content: center;
+  justify-content: er;
   align-items: flex-start;
   width: 100%;
   flex-wrap: wrap;

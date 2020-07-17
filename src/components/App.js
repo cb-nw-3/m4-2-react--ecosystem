@@ -6,7 +6,7 @@ import Homepage from './Homepage';
 import About from './About';
 import ItemDetails from './ItemDetails';
 import Sellers from './Sellers';
-import SellerDetails from './sellerDetails';
+import SellerDetails from './SellerDetails';
 
 function App(props) {
   return (
