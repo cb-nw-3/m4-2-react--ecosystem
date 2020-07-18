@@ -1,22 +1,32 @@
 import React from "react";
 import styled from "styled-components";
+import { items } from "../data.js";
+import { Link } from "react-router-dom";
 
 function ListingComponent({ item }) {
   console.log("ListingComponent");
   console.log(item);
-  let dave = "1em";
+  let link_url = "/items/" + item.id;
 
   return (
     <ListingComponentWrapper>
       <FruitImage image_source={item.imageSrc}></FruitImage>
-      <FruitName>{item.name}</FruitName>
 
+      <FruitLink to={link_url}>{item.name}</FruitLink>
       <FruitLatinName>{item.latinName}</FruitLatinName>
     </ListingComponentWrapper>
   );
 }
 
 export default ListingComponent;
+
+const FruitLink = styled(Link)`
+  text-decoration: none;
+  padding-top: 10px;
+  text-align: center;
+  z-index: 2;
+  background-color: white;
+`;
 
 const ListingComponentWrapper = styled.div`
   display: flex;
@@ -44,13 +54,6 @@ const FruitImage = styled.div`
   &:hover {
     transform: scale(1.4);
   }
-`;
-
-const FruitName = styled.div`
-  padding-top: 10px;
-  text-align: center;
-  z-index: 2;
-  background-color: white;
 `;
 
 const FruitLatinName = styled.div`

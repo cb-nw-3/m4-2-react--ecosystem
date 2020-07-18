@@ -6,6 +6,7 @@ import About from "./About";
 import Items from "./Items";
 import Home from "./Home";
 import Header from "./Header";
+import ItemDetails from "./ItemDetails";
 
 import { createGlobalStyle } from "styled-components";
 
@@ -25,6 +26,9 @@ function App(props) {
 
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route exact path="/items/:itemId">
+            <ItemDetails />
           </Route>
         </Switch>
       </div>
@@ -49,7 +53,13 @@ nav
 }
 
 Link{
-  padding-right: 200px;
+  padding-right: 0px;
+  color:green;
+  font-size: 50px;
+
+  :visited {
+    text-decoration: none;
+  }
 
 }
 
