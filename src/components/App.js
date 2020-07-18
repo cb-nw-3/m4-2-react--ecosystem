@@ -8,8 +8,11 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
   * {
     font-family: 'Lato', sans-serif;
+    margin-right: 53px;
   }
 `;
+
+
 
 //Create two new components, `Home` and `About` and render them for their respective routes:
 export default App;
