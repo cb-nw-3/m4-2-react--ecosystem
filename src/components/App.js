@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+//Create two new components, `Home` and `About` and render them for their respective routes:
 export default App;
 function App(props) {
   return (

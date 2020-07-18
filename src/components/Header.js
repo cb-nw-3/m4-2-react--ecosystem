@@ -1,8 +1,10 @@
 import React from 'react';
+//The links should use a `<Link>` component to link towards the relevant pages
+//(also imported from `react-router-dom`).
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const Wrapper = styled.div`
+const Wrapper = styled.header`
   display: flex;
   justify-content: space-between;
   padding-top: 20px
