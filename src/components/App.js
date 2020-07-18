@@ -6,6 +6,8 @@ import Header from './Header';
 import About from './About';
 import Homepage from './Homepage';
 import ItemDetails from './ItemDetails';
+import Sellers from './Sellers';
+import SellerDetail from './SellerDetail';
 
 function App(props) {
   return (
@@ -21,6 +23,12 @@ function App(props) {
             </Route>
             <Route path="/items/:itemId">
               <ItemDetails />
+            </Route>
+            <Route exact path="/sellers">
+              <Sellers />
+            </Route>
+            <Route path="/sellers/:sellerId">
+              <SellerDetail />
             </Route>
           </Switch>
         </Router>

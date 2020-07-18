@@ -7,15 +7,14 @@ function Header() {
   return <StyledWrapper>
       <StyledTitle>Fruit Emporium</StyledTitle>
       <nav>
-        <NavigationLink exact to="/" activeStyle={{
-          borderBottom: '2px solid purple'
-        }}>
+        <NavigationLink exact to="/" activeStyle={{borderBottom: '2px solid purple'}}>
           Home
         </NavigationLink>
-        <NavigationLink to="/about" activeStyle={{
-          borderBottom: '2px solid purple'
-        }}>
+        <NavigationLink to="/about" activeStyle={{borderBottom: '2px solid purple'}}>
           About
+        </NavigationLink>
+        <NavigationLink to="/sellers" activeStyle={{borderBottom: '2px solid purple'}}>
+          Sellers
         </NavigationLink>
       </nav>
     </StyledWrapper>

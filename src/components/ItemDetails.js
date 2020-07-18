@@ -1,7 +1,7 @@
 import React from "react";
+import { useParams } from 'react-router-dom';
 
 import styled from 'styled-components';
-import { useParams } from 'react-router-dom';
 import { sellers, items } from '../data';
 
 function ItemDetails() {
@@ -30,7 +30,7 @@ function ItemDetails() {
       <StyledLatinName>{item.latinName}</StyledLatinName>
       <StyledDescription>{item.description}</StyledDescription>
       <StyledProvenance>Product of <Bold>{item.countryOfOrigin}</Bold></StyledProvenance>
-<StyledButton>{buttonValue}</StyledButton>
+      <StyledButton>{buttonValue}</StyledButton>
       <StyledSeller>
         <StyledImageSeller src={sellers[item.sellerId].avatarSrc}></StyledImageSeller>
         <StyledSellerInfo>
