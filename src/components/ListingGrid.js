@@ -13,9 +13,10 @@ function ListingGrid(props) {
         if (props.props.seller === item.sellerId) {
           return <ListingItem item={item} key={item.id}></ListingItem>
         }
+        // to remove yellow warning in console that map expect a return value
+        return <></>
       })}
     </StyledGrid>
-
   } else if (props.items) {
     return <StyledGrid>
       {props.items.map(item => {
@@ -24,11 +25,10 @@ function ListingGrid(props) {
     </StyledGrid>
   } else if (props.sellers) {
     return <StyledGrid>
-    {props.sellers.map(seller => {
-      return <ListingSeller seller={seller} key={seller.id}></ListingSeller>
-    })}
-  </StyledGrid>
-
+      {props.sellers.map(seller => {
+        return <ListingSeller seller={seller} key={seller.id}></ListingSeller>
+      })}
+    </StyledGrid>
   }
 }
 

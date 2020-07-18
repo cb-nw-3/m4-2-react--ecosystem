@@ -26,12 +26,10 @@ const StyledWrapper = styled.header`
   justify-content: space-between;
   padding: 0 10px;
 `;
-
 const StyledTitle = styled.h1`
   font-size: 32px;
   margin-left: 20px;
 `;
-
 const NavigationLink = styled(NavLink)`
   text-decoration: none;
   padding: 10px;

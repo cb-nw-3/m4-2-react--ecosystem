@@ -25,14 +25,12 @@ const StyledImage = styled.img`
   border-radius: 15px;
   margin-top: -15px;
 `
-
 const StyledName = styled.h3`
   padding: 0;
   margin: 0;
   padding-bottom: 15px;
   font-size: 24px;
 `
-
 const StyledLatinName = styled.h4`
   padding: 0;
   margin: 0;
@@ -40,11 +38,9 @@ const StyledLatinName = styled.h4`
   font-weight: normal;
   padding-bottom: 15px;
 `
-
 const StyledLinkToItem = styled(Link)`
   height: 150px;
   width: 150px;
 `
-
 
 export default ListingSeller;

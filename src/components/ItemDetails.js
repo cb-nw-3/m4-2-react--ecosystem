@@ -5,9 +5,6 @@ import styled from 'styled-components';
 import { sellers, items } from '../data';
 
 function ItemDetails() {
-  console.log('sellers', sellers);
-  console.log('items', items);
-
   const { itemId } = useParams();
   console.log('itemId', itemId);
 
@@ -46,14 +43,12 @@ const StyledImage = styled.img`
   width: 350px;
   border-radius: 15px;
 `
-
 const StyledContainer = styled.div`
   width: 750px;
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
 `
-
 const StyledInformation = styled.div`
   width: 350px;
 `
