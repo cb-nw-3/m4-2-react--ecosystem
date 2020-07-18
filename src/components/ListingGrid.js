@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Wrapper = styled.div`
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 50px;
   grid-template-columns: repeat(3, 1fr);
 `;
 

@@ -3,14 +3,9 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Homepage from "./Homepage";
 import About from "./About";
 import ItemDetails from "./ItemsDetails";
-import { createGlobalStyle } from "styled-components";
+import GlobalStyle from './GlobalStyles';
 
-const GlobalStyle = createGlobalStyle`
-  * {
-    font-family: 'Lato', sans-serif;
-    margin-right: 53px;
-  }
-`;
+
 
 
 
@@ -20,7 +15,7 @@ function App(props) {
   return (
   <Router>
     
-     
+   
       <Switch>
         <Route exact path="/"><Homepage /></Route>
         <Route exact path="/about"><About /></Route>
