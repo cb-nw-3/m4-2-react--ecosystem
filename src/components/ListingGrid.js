@@ -9,7 +9,7 @@ const ListingGrid = ({ itemList }) => {
         <>
             <Container>
                 {itemList.map((item) => (
-                    <div>
+                    <div key={item.name}>
                         <Link to={`/items/${item.id}`}>
                             <img
                                 src={item.imageSrc}
