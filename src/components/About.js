@@ -6,7 +6,8 @@ function About() {
   return (
     <div>
       <p>
-        Fruit emporium is founded on a very simple principle: Fruit is good.
+        Fruit emporium is founded on a very simple principle:
+        <strong> Fruit is good.</strong>
       </p>
       <p>
         We carry the finest selection of produce from around the world, from
