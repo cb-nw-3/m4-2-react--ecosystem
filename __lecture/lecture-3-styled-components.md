@@ -172,7 +172,7 @@ function FantasticStory(props) {
 ### Global styles
 
 ```jsx
-import {createGlobalStyles} from 'styled-components';
+import {createGlobalStyle} from 'styled-components';
 
 const GlobalStyles = createGlobalStyles`
   * {
