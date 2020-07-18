@@ -1,14 +1,22 @@
 import React from "react";
 
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Header() {
   return <StyledWrapper>
       <StyledTitle>Fruit Emporium</StyledTitle>
       <nav>
-        <NavigationLink exact to="/">Home</NavigationLink>
-        <NavigationLink to="/about">About</NavigationLink>
+        <NavigationLink exact to="/" activeStyle={{
+          borderBottom: '2px solid purple'
+        }}>
+          Home
+        </NavigationLink>
+        <NavigationLink to="/about" activeStyle={{
+          borderBottom: '2px solid purple'
+        }}>
+          About
+        </NavigationLink>
       </nav>
     </StyledWrapper>
 }
@@ -25,7 +33,7 @@ const StyledTitle = styled.h1`
   margin-left: 20px;
 `;
 
-const NavigationLink = styled(Link)`
+const NavigationLink = styled(NavLink)`
   text-decoration: none;
   padding: 10px;
   font-weight: bold;
