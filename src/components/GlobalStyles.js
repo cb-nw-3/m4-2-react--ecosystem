@@ -11,6 +11,10 @@ h1 {
     font-size: 40px;
     font-weight: bold;
 }
+
+a {
+    text-decoration: none;
+}
 `
 
 export default GlobalStyle;

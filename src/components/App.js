@@ -1,36 +1,57 @@
 import React from 'react';
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 import styled from 'styled-components';
-import GlobalStyle from './GlobalStyles'
+import { sellers, items } from '../data.js';
 
-function Header() {
+import GlobalStyle from './GlobalStyles';
+import Header from './Header';
+import ListingGrid from './ListingGrid';
+
+const Wrapper = styled.div`
+  padding: 30px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  `;
+
+const Top = styled.div`
+  font-size: 20px;
+  width: 100%;
+  margin-bottom: 30px;
+  `;
+
+const Browse = styled.p`
+  font-weight: bold;
+  `;
+
+function Homepage(props) {
   return (
     <Wrapper>
-      <Title>Fruit Emporium</Title>
-      <Navbar>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-      </Navbar>
+
+      <Top>
+
+        <div>Fruit emporium sells the finest fruits from this world and beyond.</div>
+
+        <div><Browse>Browse items:</Browse></div>
+      </Top>
+
+      <ListingGrid itemList={props.fruit} />
+
     </Wrapper>
-  );
+  )
 }
 
-const Wrapper = styled.header`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px;
-`;
+function About() {
+  return (
+    <Wrapper>
+      <div>Fruit emporium is founded on a very simple principle: Fruit is good.</div>
 
-const Title = styled.h1`
-  font-size: 32px;
-  /* Other styles here */
-`;
-
-const Navbar = styled.div`
-  border: 2px solid orange;
-  padding-left: 20px;
-`;
+      <div>We carry the finest selection of produce from around the world, from tart citrus to sweet cherries. Our sellers are world-class, and your fruit is guaranteed to be worthy of auction in Asian markets.</div>
+    </Wrapper>
+  )
+}
 
 function App(props) {
   return (
@@ -39,7 +60,9 @@ function App(props) {
       <Router>
         <Header />
         <Switch>
-          <Route path="/">Homepage</Route>
+          <Route path="/">
+            <Homepage fruit={Object.values(items)} />
+          </Route>
           <Route path="/about">About</Route>
           <Route path="/items/:itemId">Items</Route>
         </Switch>
