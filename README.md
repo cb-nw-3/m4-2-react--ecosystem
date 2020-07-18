@@ -20,7 +20,7 @@ We want to end up with the following routes:
 
 - `/` - the homepage, with a listing of all store items
 - `/about` - A page with some general information about the website
-- `/items/:itemId` - The details view for a single item
+- `/items/:itemId` - The details view for a single item`
 
 ### Homepage:
 
@@ -121,7 +121,7 @@ Create a new `ListingGrid` component. This component will take an array of store
 
 ```js
 const ListingGrid = ({ itemList }) => {
-  return 'Todo';
+  return "Todo";
 };
 ```
 
@@ -178,7 +178,7 @@ Here are the steps we'll need to take:
 That last step relies on the `useParams` hook, from react-router-dom. We can access the `itemId` URL parameter like so:
 
 ```js
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 
 const ItemDetails = () => {
   const { itemId } = useParams();
