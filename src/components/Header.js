@@ -31,7 +31,7 @@ const Nav = styled.div`
   justify-content: space-between;
   color: purple;
   font-size: 1em;
-  font-style: bold;
+  font-weight: bold;
 
   & a {
     text-decoration: none;
