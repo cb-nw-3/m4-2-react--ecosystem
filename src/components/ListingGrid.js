@@ -47,11 +47,6 @@ const FoodImage = styled.img`
   margin-top: -50px;
 `;
 
-const Name = styled.h2`
-  font-size: 1.3rem;
-  margin: 10px;
-`;
-
 const StyledLink = styled(Link)`
   font-size: 1.3rem;
   margin: 10px;
