@@ -1,7 +1,6 @@
 import React from "react";
 
 import styled from 'styled-components';
-import GlobalStyles from './GlobalStyles';
 import ListingGrid from './ListingGrid';
 import {items} from '../data'
 

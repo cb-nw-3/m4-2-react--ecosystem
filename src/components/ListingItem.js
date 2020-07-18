@@ -1,12 +1,12 @@
 import React from 'react';
 
 import styled from 'styled-components';
-
+import { Link } from 'react-router-dom';
 
 function ListingItem(props) {
   console.log('ListingItem', props)
   return <StyledDiv>
-    <StyledImage src={props.item.imageSrc}></StyledImage>
+    <StyledLinkToItem to={`/items/${props.item.id}`}><StyledImage src={props.item.imageSrc}></StyledImage></StyledLinkToItem>
     <StyledName>{props.item.name}</StyledName>
     <StyledLatinName>{props.item.latinName}</StyledLatinName>
   </StyledDiv>
@@ -39,6 +39,11 @@ const StyledLatinName = styled.h4`
   font-style: italic;
   font-weight: normal;
   padding-bottom: 15px;
+`
+
+const StyledLinkToItem = styled(Link)`
+  height: 150px;
+  width: 150px;
 `
 
 export default ListingItem;

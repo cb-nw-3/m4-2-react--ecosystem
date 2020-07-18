@@ -26,8 +26,10 @@ const StyledTitle = styled.h1`
 `;
 
 const NavigationLink = styled(Link)`
-  textDecoration: none;
+  text-decoration: none;
   padding: 10px;
+  font-weight: bold;
+  color: purple;
 `
 
 export default Header;
