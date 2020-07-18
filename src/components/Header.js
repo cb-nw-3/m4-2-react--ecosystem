@@ -28,8 +28,7 @@ const Wrapper = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    padding-left: 30px;
-    padding-right: 30px;
+    margin-bottom: 20px;
 `;
 
 const Title = styled.h1`

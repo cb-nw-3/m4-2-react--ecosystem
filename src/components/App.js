@@ -5,39 +5,30 @@ import {
     Route 
 } from 'react-router-dom';
 
+import GlobalStyle from './GlobalStyle';
 import Header from './Header';
+import Homepage from './Homepage';
+import About from './About';
+import Error from './Error';
 
 function App(props) {
     return (
         <Router>
-            <div>
-                <Header />
-                <Switch>
-                    <Route exact path="/">
-                        <Homepage />
-                    </Route>
-                    <Route exact path="/about">
-                        <About />
-                    </Route>
-                    <Route>
-                        <ErrorPage />
-                    </Route>
-                </Switch>
-            </div>
+            <Header />
+            <Switch>
+                <Route exact path="/">
+                    <Homepage />
+                </Route>
+                <Route path="/about">
+                    <About />
+                </Route>
+                <Route>
+                    <Error />
+                </Route>
+            </Switch>
+            <GlobalStyle />
         </Router>
     );
 }
-
-const Homepage = () => {
-    return 'Home';
-};
-
-const About = () => {
-    return 'About';
-};
-
-const ErrorPage = () => {
-    return <h3>Error</h3>;
-};
 
 export default App;
