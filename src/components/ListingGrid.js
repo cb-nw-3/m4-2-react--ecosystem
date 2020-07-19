@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const ListingGrid = ({ itemList }) => {
   return (
@@ -8,7 +9,9 @@ const ListingGrid = ({ itemList }) => {
         return (
           <Item key={item.id + index}>
             <ItemImage src={item.imageSrc} />
-            <ItemName>{item.name}</ItemName>
+            <StyledLink Link to={`/items/${item.id}`}>
+              {item.name}
+            </StyledLink>
             <ItemLatin>{item.latinName}</ItemLatin>
           </Item>
         );
@@ -41,14 +44,13 @@ const ItemImage = styled.img`
   border-radius: 10px;
 `;
 
-const ItemName = styled.span`
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+const StyledLink = styled(Link)`
   font-weight: bold;
   padding: 10px;
+  text-decoration: none;
 `;
 
 const ItemLatin = styled.span`
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-style: italic;
 `;
 

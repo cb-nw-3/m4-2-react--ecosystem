@@ -19,11 +19,10 @@ const Wrapper = styled.header`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 `;
 
 const Title = styled.h1`
-  font-size: 32px;
+  padding-left: 30px;
 `;
 
 const Nav = styled.div`

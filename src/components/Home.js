@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { items } from "../data.js";
-import ListingGrid from "./ListingGrid.js";
+import ListingGrid from "./ListingGrid";
 
 const Home = () => {
   return (
@@ -16,7 +16,7 @@ const Home = () => {
 };
 
 const Paragraph = styled.p`
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-left: 30px;
 `;
 
 export default Home;

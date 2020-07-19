@@ -16,8 +16,6 @@ const About = () => {
   );
 };
 
-const Paragraph = styled.p`
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-`;
+const Paragraph = styled.p``;
 
 export default About;
