@@ -15,9 +15,10 @@ const FruitCard = styled.div`
 
 const FruitDesc = styled.div`
     margin: 20px;
+    width: 500px;
 
-    & .foo {
-        font-style: italics;
+    & .country {
+        font-style: italic;
     }
 `
 
@@ -26,24 +27,58 @@ const ButtonStyle = styled.button`
     background: royalblue;
     color: white;
     font-size: 20px;
-    padding: 20px 35px 20px 35px;
+    padding: 15px 35px 15px 35px;
     border-radius: 15px;
 `
 
 const Button = (props) => {
+    if (props.fruit.quantity > 0) {
+        return (
+            <ButtonStyle>
+                ${props.fruit.price} - Buy Now
+            </ButtonStyle>
+        )
+    } else {
+        return (
+            <ButtonStyle>
+                Out of stock
+            </ButtonStyle>
+        )
+    }
+}
+
+const SellerAvatar = styled.div`
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+
+    & p {
+        margin-left: 20px;
+    }
+
+    & img {
+        width: 40px;
+        border-radius: 50%;
+    }
+    
+    & span {
+        font-weight: bold;
+    }
+`
+
+const Seller = (props) => {
+    const sellerInfo = sellers[props.sellerId];
+    console.log(sellerInfo);
     return (
-        <ButtonStyle>
-            ${props.price} - Buy Now
-        </ButtonStyle>
-    )
+        <SellerAvatar>
+            <img src={sellerInfo.avatarSrc} alt={sellers.alice.id} />
+            <p>Sold by: <span>{sellerInfo.storeName}</span></p>
+        </SellerAvatar>
+    );
 }
 
-const Seller = (sellerId) => {
-    return <p>yes.</p>
-}
-
-const FruitView = (fruit) => {
-    let currFruit = items[fruit.fruit];
+const FruitView = (props) => {
+    let currFruit = items[props.fruit];
     return (
         <FruitCard>
             <img src={currFruit.imageSrc} />
@@ -51,13 +86,9 @@ const FruitView = (fruit) => {
                 <h2>{currFruit.name}</h2>
                 <h3>{currFruit.latinName}</h3>
 
-                {/* there's got to be a less dumb way of doing this
-                 it's so ridiculous that I need to make another
-    styled component just to make something italic */}
-
                 <p>{currFruit.description}</p>
-                <p>Product of {currFruit.countryOfOrigin}</p>
-                <Button price={currFruit.price} />
+                <p className="country">Product of {currFruit.countryOfOrigin}</p>
+                <Button fruit={currFruit} />
                 <Seller sellerId={currFruit.sellerId} />
             </FruitDesc>
         </FruitCard>
