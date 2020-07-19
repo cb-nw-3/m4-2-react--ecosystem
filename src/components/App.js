@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import styled from 'styled-components';
-import { sellers, items } from '../data.js';
+import { items } from '../data.js';
 
 import GlobalStyle from './GlobalStyles';
 import Header from './Header';

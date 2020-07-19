@@ -81,7 +81,7 @@ const FruitView = (props) => {
     let currFruit = items[props.fruit];
     return (
         <FruitCard>
-            <img src={currFruit.imageSrc} />
+            <img src={currFruit.imageSrc} alt={currFruit.name} />
             <FruitDesc>
                 <h2>{currFruit.name}</h2>
                 <h3>{currFruit.latinName}</h3>
