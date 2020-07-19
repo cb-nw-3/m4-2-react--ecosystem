@@ -1,15 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import styled from 'styled-components';
 import { sellers, items } from '../data.js';
 
 import GlobalStyle from './GlobalStyles';
 import Header from './Header';
 import ListingGrid from './ListingGrid';
+import ItemDetails from './ItemDetails';
 
 const Wrapper = styled.div`
   padding: 30px;
-  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,9 +46,11 @@ function Homepage(props) {
 function About() {
   return (
     <Wrapper>
-      <div>Fruit emporium is founded on a very simple principle: Fruit is good.</div>
+      <Top>
+        <div>Fruit emporium is founded on a very simple principle: Fruit is good.</div>
 
-      <div>We carry the finest selection of produce from around the world, from tart citrus to sweet cherries. Our sellers are world-class, and your fruit is guaranteed to be worthy of auction in Asian markets.</div>
+        <div>We carry the finest selection of produce from around the world, from tart citrus to sweet cherries. Our sellers are world-class, and your fruit is guaranteed to be worthy of auction in Asian markets.</div>
+      </Top>
     </Wrapper>
   )
 }
@@ -60,11 +62,19 @@ function App(props) {
       <Router>
         <Header />
         <Switch>
+
+          <Route path="/about">
+            <About />
+          </Route>
+
+          <Route path="/items/:itemId">
+            <ItemDetails />
+          </Route>
+
           <Route path="/">
             <Homepage fruit={Object.values(items)} />
           </Route>
-          <Route path="/about">About</Route>
-          <Route path="/items/:itemId">Items</Route>
+
         </Switch>
       </Router>
     </div>

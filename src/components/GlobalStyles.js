@@ -5,6 +5,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {

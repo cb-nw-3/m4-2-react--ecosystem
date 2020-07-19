@@ -7,7 +7,6 @@ const Wrapper = styled.header`
         justify-content: space-between;
         align-items: center;
         padding: 30px;
-        width: 60%;
     `;
 
 const Title = styled.h1`
