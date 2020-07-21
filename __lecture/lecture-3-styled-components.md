@@ -8,7 +8,7 @@
 ---
 
 ```jsx
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Button = styled.button`
   background: blueviolet;
@@ -19,7 +19,7 @@ const Button = styled.button`
   border-radius: 2px;
 `;
 
-ReactDOM.render(<Button>Hello World</Button>, document.querySelector('#root'));
+ReactDOM.render(<Button>Hello World</Button>, document.querySelector("#root"));
 ```
 
 ---
@@ -52,6 +52,7 @@ const Button = styled.button(`
 Despite the previous slide, our site _will_ still work in IE11.
 
 Why is that?
+code write is not the same as the browser.
 
 ---
 
@@ -59,6 +60,7 @@ Why is that?
 
 ```jsx live=true
 const Button = styled.button`
+*button is a component*
   background: blueviolet;
   border: none;
   padding: 16px 32px;
@@ -79,6 +81,7 @@ render(<Button>Hello world</Button>);
 # Why?
 
 Why would we do this, instead of having external stylesheets?
+copie/past all code and would work
 
 ---
 
@@ -101,7 +104,15 @@ function App(props) {
 }
 ```
 
----
+answer
+function App(props) {
+return <Wrapper>Hello World</Wrapper>;
+}
+const Wrapper = styled.div
+margin : 0 auto;
+height : 300px;
+
+- and delete css
 
 ### Exercise #2
 
@@ -132,7 +143,30 @@ function IconButton(props) {
     </button>
   );
 }
+i element is italic tag
 ```
+
+answer
+function IconButton(props) {
+return (
+<Btn>
+<Icon>{props.icon}</Icon>
+{props.children}
+</Btn>
+);
+}
+
+const Btn = styled.button
+color: tomato; font-weight: bold; padding: 20px;
+
+&:hover,
+&:focus {
+transform: translateY(-3px);
+}
+
+const Icon = styled.i
+width: 32px;
+height: 32px;
 
 ---
 
@@ -167,7 +201,29 @@ function FantasticStory(props) {
 }
 ```
 
----
+const Paragraph = styled.p
+font-size: 18px;
+line-height: 1.4;
+color: #333;
+
+&strong {
+color : red;
+}
+
+&em {
+color: #666;
+}
+function FantasticStory(props) {
+return (
+
+<div>
+<paragraph>
+The <strong>quick</strong> red fox jumped over the <em>lazy</em> dog.
+</paragraph>
+<p>The end.</p>
+</div>
+);
+}
 
 ### Global styles
 
@@ -185,5 +241,17 @@ const GlobalStyles = createGlobalStyles`
 `
 
 // Used as a component
+export default GlobalStyles;
+import GlobalStyles from '../'
+//src/components/App
+const App = () => {
+  return (
+    <div>
+    <MainContent />
+
+    <button>Hello</button>
+  )
+}
+
 <GlobalStyles />
 ```

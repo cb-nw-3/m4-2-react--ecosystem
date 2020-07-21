@@ -6,15 +6,35 @@
 
 ```
 Warning: Each child in a list should have a unique "key" prop.
+* common warning we see in react*
 
 Check the render method of `App`.
 in SomeComponent (at src/index.js:24)
 in App (at src/index.js:31)
+
+eg
+//items =["apple", "banana"];
+//<ul><li>apple</li><li>banana</li></ul>
+const List = ({ items }) => {
+  return (
+    <div>
+    <ul>
+    {items.map(items => {
+      return (
+        <li> {items} <li>
+      );
+    })};
+    <ul>
+  );
+}
+react dosent know how to keep track of changes.
+solution = add key attribute : <li key = {item}> {item} </li>
 ```
 
 ---
 
 - try to _not_ use array indices of the element.
+  _dosent let react optimise_
 - try to use a provided unique identifier (if there is one)
 - else, create your own unique _id_ based on the content...
 
@@ -48,7 +68,7 @@ export default Button;
 ```
 
 ```js
-import Button from '../Button';
+import Button from "../Button"; *can name it wathever we want*
 ```
 
 ---
@@ -63,16 +83,18 @@ export const logOut = () => { ✂️ };
 ```
 
 ```js
-import { logIn, logOut } from '../../authentication-utils.js';
+*to use them, have to give the same name*
+import { logIn, logOut } from "../../authentication-utils.js";
 ```
 
 ---
 
 ## A module can have:
 
-- 0 or 1 _default_ exports,
+- 0 or 1 _default_ exports, _can't have multiple_
 - any number of _named_ exports, and
-- both types of exports.
+- both types of exports. \*eg export default whatever;
+  import whatever, {logIn, logOut} frim '../../authentication-utils.js"}
 
 ---
 
@@ -93,7 +115,7 @@ export default data;
 
 ```js
 // src/index.js
-import theBestData from './data';
+import theBestData from "./data";
 ```
 
 Correct
@@ -102,12 +124,12 @@ Correct
 
 ```js
 // src/data.js
-export const MAGIC_NUMBER = 123;
+export const MAGIC_NUMBER = 123; // dosent have default key words
 ```
 
 ```js
 // src/index.js
-import MAGIC_NUMBER from './data';
+import MAGIC_NUMBER from "./data";
 ```
 
 Incorrect - should be `import { MAGIC_NUMBER }`, with squigglies
@@ -126,10 +148,10 @@ export default data;
 
 ```js
 // src/index.js
-import { data, users } from './data';
+import { data, users } from "./data";
 ```
 
-Incorrect — `data` is a default export, so it should be `import data, { users }`
+Incorrect — `data` is a default export, so it should be `import data, { users }` // data is not a name export
 
 ---
 
@@ -141,13 +163,14 @@ export default const baseball = '⚾️';
 
 ```js
 // src/index.js
-import baseball from './data';
+import baseball from "./data";
 ```
 
 Incorrect - for weird reasons, this needs to be:
+_export default cant be use on the same line than const_
 
 ```js
-const baseball = '⚾️';
+const baseball = "⚾️";
 
 export default baseball;
 ```

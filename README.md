@@ -91,6 +91,7 @@ You should be able to click the links to update the text on the screen:
 Create two new components, `Home` and `About` and render them for their respective routes:
 
 ```jsx
+//inside component
 <Switch>
   <Route path="/">
     <Homepage />
@@ -121,7 +122,7 @@ Create a new `ListingGrid` component. This component will take an array of store
 
 ```js
 const ListingGrid = ({ itemList }) => {
-  return 'Todo';
+  return "Todo";
 };
 ```
 
@@ -178,7 +179,7 @@ Here are the steps we'll need to take:
 That last step relies on the `useParams` hook, from react-router-dom. We can access the `itemId` URL parameter like so:
 
 ```js
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 
 const ItemDetails = () => {
   const { itemId } = useParams();
