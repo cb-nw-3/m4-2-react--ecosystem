@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
-import "./Header.css";
 
 function Header() {
   return (
@@ -11,7 +10,7 @@ function Header() {
       <nav>
         <NavigationList>
           <li>
-            <NavigationLink to="/">Homepage</NavigationLink>{" "}
+            <NavigationLink to="/">Homepage</NavigationLink>
           </li>
           <li>
             <NavigationLink to="/about">About</NavigationLink>
@@ -24,12 +23,15 @@ function Header() {
 
 const Wrapper = styled.header`
   display: flex;
-  /* Other styles here */
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
 `;
 
 const Title = styled.h1`
-  font-size: 32px;
-  /* Other styles here */
+   font-size: 40px;
+   font-weight: 900;
 `;
 
 const NavigationList = styled.ul`
@@ -38,8 +40,9 @@ const NavigationList = styled.ul`
 `;
 
 const NavigationLink = styled(NavLink)`
-  font-size: 16px;
-  color: red;
-`;
+  position: relative;
+  text-decoration: none;
+  padding: 0 16px;
+  `;
 
 export default Header;
