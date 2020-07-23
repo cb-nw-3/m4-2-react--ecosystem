@@ -15,11 +15,7 @@ const ListingItem = ({ item }) => {
 };
 
 const CardLink = styled(Link)`
-  text-decoration: none;
-
-  &:hover {
-    border: blue;
-  }
+color: red;
 `;
 
 const Wrapper = styled.div`

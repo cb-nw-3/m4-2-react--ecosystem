@@ -10,10 +10,10 @@ function Header() {
       <nav>
         <NavigationList>
           <li>
-            <NavigationLink to="/">Homepage</NavigationLink>
+            <NavigationLink to="/" activeClassName="selected">Homepage</NavigationLink>
           </li>
           <li>
-            <NavigationLink to="/about">About</NavigationLink>
+            <NavigationLink to="/about" activeClassName="selected">About</NavigationLink>
           </li>
         </NavigationList>
       </nav>
@@ -43,6 +43,12 @@ const NavigationLink = styled(NavLink)`
   position: relative;
   text-decoration: none;
   padding: 0 16px;
+
+  :hover {
+		color: green;
+		cursor: pointer;
+	}
+
   `;
 
 export default Header;

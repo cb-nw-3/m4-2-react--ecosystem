@@ -5,6 +5,7 @@ import GlobalStyles from './GlobalStyles';
 import styled from 'styled-components';
 import Home from './Home';
 import About from './About';
+import ItemDetails from './ItemDetails';
 
 function App(props) {
   return (
@@ -17,6 +18,9 @@ function App(props) {
           <Home /></Route>
           <Route path="/about">
           <About /></Route>
+          <Route path="/items/:itemId">
+              <ItemDetails />
+            </Route>
         </Switch>
         </Main>
       </Wrapper>
