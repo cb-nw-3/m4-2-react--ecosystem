@@ -1,31 +1,16 @@
-import React from "react";
-import styled from 'styled-components';
+import React from 'react';
 
 function About(props) {
     return (
         <div>
-            <Paragragh>
-                Fruit emporium is founded on a very simple principle:{ ' ' }  
-                <strong>
-                    Fruit is good.
-                </strong>
-            </Paragragh>
-            <Paragragh>
+            <p>
+                Fruit emporium is founded on a very simple principle: <strong>Fruit is good.</strong>
+            </p>
+            <p>
                 We carry the finest selection of produce from around the world, from tart citrus to sweet cherries. Our sellers are world-class, and your fruit is guaranteed to be worthy of auction in Asian markets.                
-            </Paragragh>
+            </p>
         </div>
     );
 }
-
-const Paragragh = styled.div`
-    font-size: 18px;
-    line-height: 1em;
-    color: #333;
-    padding-bottom: 20px;
-
-    & strong {
-        color: black;
-    }
-`;
 
 export default About;

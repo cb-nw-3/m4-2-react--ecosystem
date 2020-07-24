@@ -1,6 +1,7 @@
-import React from "react";
-
+import React from 'react';
 import styled from 'styled-components';
+
+import { Link } from 'react-router-dom';
 
 const ListingGrid = ({ itemList }) => {
     const items = Object.values(itemList)
@@ -9,11 +10,14 @@ const ListingGrid = ({ itemList }) => {
         <Wrapper>
             {items.map((item) => (
                 <DIV key={item.id}>
-                    <Image src={item.imageSrc} alt={item.name} />
-                    <H3>{item.name}</H3>
-                    <Paragragh>
+                    <Link to={`/items/${item.id}`}>
+                        <Image src={item.imageSrc} alt={item.name} />
+                    </Link>
+                    <h2>{item.name}</h2>
+                    <Border />
+                    <p>
                         <em>{item.latinName}</em>
-                    </Paragragh>
+                    </p>
                 </DIV>
             ))}
         </Wrapper>
@@ -22,8 +26,9 @@ const ListingGrid = ({ itemList }) => {
 
 const DIV = styled.div`
     text-align: center;
-    box-shadow: inset 0 0 2px #000;
+    box-shadow: 0px 2px 10px 10px #f8f8f8;
     border-radius: 20px;
+    border: none;
 `;
 
 const Image = styled.img`
@@ -32,33 +37,18 @@ const Image = styled.img`
     border-radius: 10px;
 `;
 
-const H3 = styled.h3`
-    margin: 0;
-    padding: 0;
-`;
-
-const Paragragh = styled.p`
-    font-size: 18px;
-    line-height: 1em;
-    color: #333;
-    padding-bottom: 20px;
-
-    & strong {
-        color: black;
-    }
-
-    & em {
-        margin-top: 0px;
-        font-size: 14px;
-        font-style: italic;
-        color: lightgray;
-    }
+const Border = styled.div`
+    margin: auto;
+    width: 12%;
+    border-bottom: 3px solid #dcdcdc;
+    padding: 6px;
 `;
 
 const Wrapper = styled.div`
     display: grid;
     grid-gap: 2em;
     grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    padding-top: 3em;
 `;
 
 export default ListingGrid;

@@ -2,13 +2,14 @@ import React from 'react';
 import { 
     BrowserRouter as Router,
     Switch, 
-    Route 
+    Route
 } from 'react-router-dom';
 
-import GlobalStyle from './GlobalStyle';
+import GlobalStyles from './GlobalStyles';
 import Header from './Header';
 import Homepage from './Homepage';
 import About from './About';
+import ItemDetails from './ItemDetails';
 import Error from './Error';
 
 function App(props) {
@@ -19,14 +20,18 @@ function App(props) {
                 <Route exact path="/">
                     <Homepage />
                 </Route>
-                <Route path="/about">
+                <Route exact path="/about">
                     <About />
                 </Route>
+                <Route exact path="/items/:itemId">
+                    <ItemDetails /> 
+                </Route>
                 <Route>
+                    {/* TODO: fix 404 redirect from items id page */}
                     <Error />
                 </Route>
             </Switch>
-            <GlobalStyle />
+            <GlobalStyles />
         </Router>
     );
 }

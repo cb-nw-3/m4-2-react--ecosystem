@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 import styled from 'styled-components';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 function Header() {
     return (
@@ -28,11 +28,11 @@ const Wrapper = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-bottom: 20px;
+    margin-bottom: 1.5em;
 `;
 
 const Title = styled.h1`
-    font-size: 32px;
+    font-size: 2em;
 `;
 
 const NavBar = styled.ul`
@@ -41,7 +41,7 @@ const NavBar = styled.ul`
 `;
 
 const NavLink = styled(Link)`
-    margin: 0 20px;
+    margin: 0 1em;
     color: blue;
     text-decoration: none;
 `;
