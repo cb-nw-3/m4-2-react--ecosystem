@@ -6,18 +6,35 @@ function Header(props) {
   return (
     <Wrapper>
       <Title>FRUIT EMPORIUM</Title>
-      <nav>
-        <Link to="/">Homepage</Link>
-        <Link to="/about">About</Link>
-      </nav>
+      <Nav>
+        <MyLink to="/">Homepage</MyLink>
+        <MyLink to="/about">About</MyLink>
+      </Nav>
     </Wrapper>
   );
 }
 
 const Wrapper = styled.header`
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around;
+  align-content: center; */
+  flex-wrap: wrap;
+  justify-content: space-between;
   /* Other styles here */
+`;
+
+const Nav = styled.nav`
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-around;
+  align-items: center;
+`;
+
+const MyLink = styled(Link)`
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+  margin-left: 30px;
 `;
 
 const Title = styled.h1`

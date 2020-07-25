@@ -19,11 +19,15 @@ const ListingGrid = ({ itemList }) => {
 };
 
 const Grid = styled.div`
-  display: inline-block;
-  width: 33%;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-content: center;
+  display: inline-flex;
+  width: 30%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  background-color: pink;
+  border-radius: 15px;
 `;
 
 const MyLink = styled(Link)`
