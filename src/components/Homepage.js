@@ -7,15 +7,14 @@ function Homepage(props) {
     return (
         <div>
             <p>
-                Fruit emporium sells the finest fruits from this world and beyond.
+                Fruit emporium sells the finest fruits from this world and
+                beyond.
             </p>
             <p>
-                <strong>
-                    Browse items:
-                </strong>
-            </p> 
-            <ListingGrid itemList={ items } />
-        </div>  
+                <strong>Browse items:</strong>
+            </p>
+            <ListingGrid itemList={items} />
+        </div>
     );
 }
 

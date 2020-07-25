@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const ListingGrid = ({ itemList }) => {
-    const items = Object.values(itemList)
+    const items = Object.values(itemList);
 
     return (
         <Wrapper>

@@ -1,9 +1,5 @@
 import React from 'react';
-import { 
-    BrowserRouter as Router,
-    Switch, 
-    Route
-} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import GlobalStyles from './GlobalStyles';
 import Header from './Header';
@@ -17,14 +13,14 @@ function App(props) {
         <Router>
             <Header />
             <Switch>
-                <Route exact path="/">
+                <Route exact path='/'>
                     <Homepage />
                 </Route>
-                <Route exact path="/about">
+                <Route exact path='/about'>
                     <About />
                 </Route>
-                <Route exact path="/items/:itemId">
-                    <ItemDetails /> 
+                <Route exact path='/items/:itemId'>
+                    <ItemDetails />
                 </Route>
                 <Route>
                     {/* TODO: fix 404 redirect from items id page */}
