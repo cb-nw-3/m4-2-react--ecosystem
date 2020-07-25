@@ -26,23 +26,6 @@ const ItemDetails = () => {
 
     // console.log(currentItem.quantity);
 
-    let isProductInStock;
-    if (currentItem.quantity > '0') {
-        isProductInStock = (
-            <Button>{`$ ${currentItem.price} - Buy now`}</Button>
-        );
-    } else {
-        isProductInStock = (
-            <Button
-                style={{
-                    backgroundColor: '#dadada',
-                    cursor: 'not-allowed',
-                    textTransform: 'uppercase',
-                }}
-            >{`Out of stock`}</Button>
-        );
-    }
-
     return (
         <>
             <Wrapper>
@@ -65,7 +48,18 @@ const ItemDetails = () => {
                                 <strong>{currentItem.countryOfOrigin}</strong>
                             </em>
                         </p>
-                        {isProductInStock}
+                        {currentItem.quantity > '0' ? (
+                            <Button>{`$ ${currentItem.price} - Buy now`}</Button>
+                        ) : (
+                            <Button
+                                disabled={true}
+                                style={{
+                                    backgroundColor: '#dadada',
+                                    cursor: 'not-allowed',
+                                    textTransform: 'uppercase',
+                                }}
+                            >{`Out of stock`}</Button>
+                        )}
                         <p>
                             <Thumbnail src={isCurrentSellers.avatarSrc} /> Sold
                             by: <strong>{isCurrentSellers.storeName}</strong>
