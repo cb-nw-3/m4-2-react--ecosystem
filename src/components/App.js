@@ -9,6 +9,7 @@ import {
 import Header from './Header';
 import About from './About';
 import Home from './Home';
+import ItemDetail from './ItemDetails';
 
 function App(props) {
   return (
@@ -23,7 +24,7 @@ function App(props) {
           <About />
         </Route>
         <Route exact path='/items/:itemId'>
-          Item Id
+          <ItemDetail />
         </Route>
       </Switch>
     </Router>
