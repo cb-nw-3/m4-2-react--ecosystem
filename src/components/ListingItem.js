@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components'
+import { NavLink } from 'react-router-dom';
 
 
 function ListingItem({item}) {
     return (
-        <Wrapper>
+        <Wrapper to={`/items/${item.id}`} >
             <FruitPicture src={item.imageSrc} />
             <FruitName>{item.name}</FruitName>
             <FruitLatin>{item.latinName}</FruitLatin>
@@ -12,7 +13,7 @@ function ListingItem({item}) {
     );
 };
 
-const Wrapper = styled.div`
+const Wrapper = styled(NavLink)`
     width: 250px;
     display: flex;
     flex-direction: column;
