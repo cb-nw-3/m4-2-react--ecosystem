@@ -20,14 +20,14 @@ function ItemDetail() {
         <Wrapper>
             <FruitImage src={item.imageSrc} />
             <FruitInfo>
-                <h2>{item.name}</h2>
-                <p>{item.latinName}</p>
+                <FruitName>{item.name}</FruitName>
+                <FruitLatin>{item.latinName}</FruitLatin>
                 <p>{item.description}</p>
                 <p>Product of {item.countryOfOrigin}</p>
                 {(item.quantity > 0) ? (
-                    <p>{item.price} Buy Now!</p>
+                    <FruitButton><p>{item.price} Buy Now!</p></FruitButton>
                 ):(
-                    <p>Out of stock!</p>
+                    <FruitButton><p>Out of stock!</p></FruitButton>
                 )}
                 <p>Sold by: {seller.storeName}</p>
             </FruitInfo>
@@ -36,6 +36,8 @@ function ItemDetail() {
 }
 
 const Wrapper = styled.div`
+    margin: 40px 0 0 40px;
+    align-items: center;
     display: flex;
     flex-direction: row;
 `
@@ -43,11 +45,34 @@ const Wrapper = styled.div`
 const FruitInfo = styled.div`
     display: flex;
     flex-direction: column;
+    width: 500px;
+`
+
+const FruitName = styled.p`
+    font-size: 25px;
+    font-weight: bolder;
+    text-shadow: 1px 1px darkgrey;
+`
+
+const FruitLatin = styled.p`
+    font-size: 15px;
+    color: darkgrey;
+`
+
+const FruitButton = styled.button`
+    border-radius: 25px;
+    color: white;
+    background-color: blue;
+    font-size: 20px;
+    font-weight: bolder;
+    width:300px;
 `
 
 const FruitImage = styled.img`
-    width: 350px;
-    height:350px;
+    width: 300px;
+    height: 300px;
+    border-radius: 25px;
+    margin-right: 80px;
 `
 
 export default ItemDetail;
