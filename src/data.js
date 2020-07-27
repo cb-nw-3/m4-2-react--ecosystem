@@ -30,7 +30,7 @@ export const items = {
     id: 'b',
     name: 'Banana',
     latinName: 'Musa acuminata',
-    description: 'A mushy, mealy fruit 🤢',
+    description: 'A sweet and potassium filled fruit!',
     imageSrc: '/assets/banana.jpg',
     countryOfOrigin: 'Ecuador',
     sellerId: 'bob',
