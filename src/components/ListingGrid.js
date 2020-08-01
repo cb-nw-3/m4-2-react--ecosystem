@@ -3,8 +3,8 @@ import ListItem from "./ListItem";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const ListingGrid = ({ itemList }) => {
-  return itemList.map((item) => {
+const ListingGrid = (props) => {
+  return props.itemList.map((item) => {
     return (
       <Grid>
         <ListItem
@@ -17,6 +17,7 @@ const ListingGrid = ({ itemList }) => {
     );
   });
 };
+// above we used that prop that is the array to map over it and create a component foreach element
 
 const Grid = styled.div`
   display: inline-flex;
@@ -26,8 +27,9 @@ const Grid = styled.div`
   justify-content: center;
   align-items: center;
   margin: 20px;
-  background-color: pink;
+  background-color: white;
   border-radius: 15px;
+  box-shadow: 5px 8px grey;
 `;
 
 const MyLink = styled(Link)`

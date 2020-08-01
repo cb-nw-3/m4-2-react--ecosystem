@@ -6,7 +6,7 @@ import { items } from "../data.js";
 //it takes just the values and passes them as an array
 const itemsArray = Object.values(items);
 
-function Home(props) {
+function Home() {
   return (
     <Wrapper>
       <p>
@@ -17,7 +17,7 @@ function Home(props) {
     </Wrapper>
   );
 }
-
+// we passed the prop itemsArray to Listing grid here
 const Wrapper = styled.p`
   font-family: "Roboto", sans-serif;
   font-weight: lighter;

@@ -16,22 +16,18 @@ function Header(props) {
 
 const Wrapper = styled.header`
   display: flex;
-  /* justify-content: space-around;
-  align-content: center; */
-  flex-wrap: wrap;
   justify-content: space-between;
-  /* Other styles here */
 `;
 
 const Nav = styled.nav`
   display: flex;
-  /* flex-wrap: wrap; */
   justify-content: space-around;
   align-items: center;
 `;
 
 const MyLink = styled(Link)`
-  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
   text-decoration: none;
   color: black;
   margin-left: 30px;
@@ -41,6 +37,5 @@ const Title = styled.h1`
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   font-size: 50px;
-  /* Other styles here */
 `;
 export default Header;

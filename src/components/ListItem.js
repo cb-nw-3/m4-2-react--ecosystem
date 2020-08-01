@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 function ListItem(props) {
   return (
+    //name it in parent and pass it to the children
     <Item>
       <Image src={props.image} />
       <Copy>{props.name}</Copy>
@@ -10,7 +11,7 @@ function ListItem(props) {
     </Item>
   );
 }
-
+// ListItem USES THE PROPS IT GOT FROM ITS PARENT WITH PROP.
 export default ListItem;
 
 const Item = styled.div`
@@ -26,6 +27,7 @@ const Image = styled.img`
 `;
 
 const Copy = styled.h1`
+  font-family: "Roboto", sans-serif;
   font-size: 20px;
 `;
 
