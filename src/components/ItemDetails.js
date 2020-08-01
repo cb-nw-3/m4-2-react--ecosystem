@@ -83,10 +83,6 @@ const Column = styled.div`
     flex-direction: column;
     flex-basis: 100%;
     flex: 1;
-
-    & Image {
-        text-align: right;
-    }
 `;
 
 const Image = styled.img`
