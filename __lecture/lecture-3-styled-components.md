@@ -8,7 +8,7 @@
 ---
 
 ```jsx
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Button = styled.button`
   background: blueviolet;
@@ -19,7 +19,7 @@ const Button = styled.button`
   border-radius: 2px;
 `;
 
-ReactDOM.render(<Button>Hello World</Button>, document.querySelector('#root'));
+ReactDOM.render(<Button>Hello World</Button>, document.querySelector("#root"));
 ```
 
 ---
@@ -101,6 +101,13 @@ function App(props) {
 }
 ```
 
+```jsx
+const Wrapper = styled.div`
+  margin: 0 auto;
+  height: 300px;
+`;
+```
+
 ---
 
 ### Exercise #2
@@ -132,6 +139,24 @@ function IconButton(props) {
     </button>
   );
 }
+```
+
+```jsx
+const Button = styled.button`
+  color: tomato;
+  font-weight: bold;
+  padding: 20px;
+
+  &:hover,
+  &:focus {
+    transform: translateY(-3px);
+  }
+`;
+
+const Icon = styled.i`
+  width: 32px;
+  height: 32px;
+`;
 ```
 
 ---
@@ -167,12 +192,28 @@ function FantasticStory(props) {
 }
 ```
 
+```jsx
+const Paragraph = styled.p`
+  font-size: 18px;
+  line-height: 1.4;
+  color: #333;
+
+  & strong {
+    color: red;
+  }
+
+  & em {
+    color: #666;
+  }
+`;
+```
+
 ---
 
 ### Global styles
 
 ```jsx
-import {createGlobalStyles} from 'styled-components';
+import {createGlobalStyle} from 'styled-components';
 
 const GlobalStyles = createGlobalStyles`
   * {
